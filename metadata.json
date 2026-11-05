@@ -1,0 +1,6 @@
+{
+  "name": "아두이노 TEC1-12706 열전소자 실험 데이터 분석기",
+  "description": "Arduino UNO 및 MAX6675, ADS1115 센서를 연동하여 TEC1-12706 열전소자의 온도차와 발생 전압을 실시간 측정하고 유효 제벡 계수(α) 및 평균 온도 조건별 비교 분석을 수행하는 정밀 과학 실험 웹앱",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
