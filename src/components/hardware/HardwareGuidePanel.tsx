@@ -262,6 +262,69 @@ void loop() {
         </pre>
       </div>
 
+      {/* GitHub Pages 404 Cause & Single File Resolution Guide */}
+      <div className="bg-indigo-950 text-indigo-50 border border-indigo-800 rounded-lg p-5 space-y-4 shadow-md font-sans">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-indigo-800">
+          <div>
+            <div className="flex items-center gap-2 text-base font-bold text-white">
+              <span className="text-emerald-400">🚀</span>
+              <span>GitHub Pages 404 오류 해결 및 자립형 단일 HTML 파일</span>
+            </div>
+            <p className="text-xs text-indigo-200 mt-1">
+              스크린샷에서 발생한 <code>404 main.tsx</code> 오류의 원인과 <strong>단 1개의 파일(index.html)</strong>로 해결하는 방법입니다.
+            </p>
+          </div>
+
+          <a
+            href="/download/index.html"
+            download="index.html"
+            className="flex items-center justify-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-semibold text-xs transition-colors shadow-md shrink-0"
+          >
+            <span>📥 단일 index.html 다운로드</span>
+          </a>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div className="bg-indigo-900/60 p-3.5 rounded-lg border border-indigo-700/60 space-y-2">
+            <h5 className="font-bold text-amber-300 flex items-center gap-1.5">
+              <span>⚠️ 사진 속 404 오류가 발생한 이유</span>
+            </h5>
+            <ol className="list-decimal list-inside space-y-1.5 text-indigo-100 leading-relaxed text-[11px]">
+              <li>
+                <strong>정적 서버의 한계:</strong> GitHub Pages는 일반 정적 웹서버로서, 브라우저가 직접 실행할 수 없는 React/TypeScript(<code>.tsx</code>) 소스코드를 실행해주지 못합니다.
+              </li>
+              <li>
+                <strong>경로 불일치:</strong> 원본 <code>index.html</code>이 절대경로 <code>/src/main.tsx</code>를 참조하여 <code>seinbb.github.io/src/main.tsx</code>를 찾으려 했기 때문에 404가 발생했습니다.
+              </li>
+            </ol>
+          </div>
+
+          <div className="bg-indigo-900/60 p-3.5 rounded-lg border border-indigo-700/60 space-y-2">
+            <h5 className="font-bold text-emerald-300 flex items-center gap-1.5">
+              <span>✅ 해결 방법 A: 자립형 단일 파일 (가장 쉬움!)</span>
+            </h5>
+            <ol className="list-decimal list-inside space-y-1.5 text-indigo-100 leading-relaxed text-[11px]">
+              <li>
+                위의 <strong>[단일 index.html 다운로드]</strong> 버튼을 누릅니다. (모든 JS, CSS, 컴포넌트, 그래프 로직이 100% 압축 인라인된 단 1개의 파일입니다)
+              </li>
+              <li>
+                내 컴퓨터에서 다운로드된 <code>index.html</code>을 GitHub 리포지토리(<code>seinbb/tec12706-thermoelectric</code>)의 최상위(root)에 업로드(덮어쓰기)합니다.
+              </li>
+              <li>
+                약 1분 뒤 GitHub Pages 사이트를 새로고침하면 404 없이 즉시 완벽하게 실행됩니다!
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div className="bg-slate-900/80 p-3 rounded-md text-[11px] text-slate-300 flex items-start gap-2 border border-slate-700">
+          <span className="text-blue-400 font-bold shrink-0">💡 팁:</span>
+          <span>
+            다운로드한 <code>index.html</code> 파일은 인터넷이나 별도 서버 없이도 내 컴퓨터에서 더블 클릭하면 크롬/엣지 브라우저에서 바로 열리며, Web Serial API 및 아두이노 연결, 실시간 그래프 분석이 그대로 작동합니다.
+          </span>
+        </div>
+      </div>
+
       {/* Troubleshooting Checklist */}
       <div className="bg-slate-50 border border-slate-200 rounded-lg p-5 space-y-3">
         <h4 className="text-sm font-semibold text-slate-900 flex items-center gap-2">
